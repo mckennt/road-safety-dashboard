@@ -1,0 +1,92 @@
+/* ─── Variables ────────────────────────────────────────────────────── */
+:root {
+    --color-bg:        #f9f7f4;
+    --color-text:      #1a1a18;
+    --color-muted:     #888880;
+    --color-border:    #e2dfd9;
+    --color-accent:    #b5a48a;
+  
+    --font-display:    'Cormorant Garamond', Georgia, serif;
+    --font-body:       'DM Sans', sans-serif;
+  
+    --masthead-height: 64px;
+    --max-width:       1200px;
+    --gap:             clamp(1rem, 4vw, 2.5rem);
+  }
+  
+  /* ─── Reset ─────────────────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  html { scroll-behavior: smooth; }
+  
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* ─── Masthead ───────────────────────────────────────────────────────── */
+  .masthead {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--masthead-height);
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .masthead__inner {
+    max-width: var(--max-width);
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 var(--gap);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .masthead__logo {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-text);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease;
+  }
+  
+  .masthead__logo:hover {
+    color: var(--color-accent);
+  }
+  
+  .masthead__nav {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .masthead__nav a {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .masthead__nav a:hover {
+    color: var(--color-text);
+  }
+  
+  /* ─── Main ───────────────────────────────────────────────────────────── */
+  main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--gap);
+  }
