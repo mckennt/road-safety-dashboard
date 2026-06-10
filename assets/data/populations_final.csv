@@ -1,0 +1,67 @@
+"Population","Year","First Nations status","ABS Remoteness Area","Sum (Hospitalisations)"
+15580555,2011,"Non-Indigenous","Major Cities",20985
+15894277,2012,"Non-Indigenous","Major Cities",20858
+16212856,2013,"Non-Indigenous","Major Cities",22224
+16507352,2014,"Non-Indigenous","Major Cities",22572
+16804086,2015,"Non-Indigenous","Major Cities",23597
+17130579,2016,"Non-Indigenous","Major Cities",25390
+17458115,2017,"Non-Indigenous","Major Cities",25288
+17752796,2018,"Non-Indigenous","Major Cities",25236
+18047440,2019,"Non-Indigenous","Major Cities",25502
+18282264,2020,"Non-Indigenous","Major Cities",23823
+18246175,2021,"Non-Indigenous","Major Cities",25254
+5718132,2011,"Non-Indigenous","Regional",9717
+5781480,2012,"Non-Indigenous","Regional",9536
+5842700,2013,"Non-Indigenous","Regional",9218
+5888767,2014,"Non-Indigenous","Regional",9358
+5926413,2015,"Non-Indigenous","Regional",9684
+5967110,2016,"Non-Indigenous","Regional",9846
+6028596,2017,"Non-Indigenous","Regional",10163
+6090386,2018,"Non-Indigenous","Regional",10278
+6151680,2019,"Non-Indigenous","Regional",10232
+6214126,2020,"Non-Indigenous","Regional",9936
+6268822,2021,"Non-Indigenous","Regional",10332
+371456,2011,"Non-Indigenous","Remote",789
+373691,2012,"Non-Indigenous","Remote",802
+373990,2013,"Non-Indigenous","Remote",765
+365978,2014,"Non-Indigenous","Remote",737
+356448,2015,"Non-Indigenous","Remote",694
+348262,2016,"Non-Indigenous","Remote",678
+344577,2017,"Non-Indigenous","Remote",653
+342012,2018,"Non-Indigenous","Remote",720
+340485,2019,"Non-Indigenous","Remote",638
+340101,2020,"Non-Indigenous","Remote",660
+339747,2021,"Non-Indigenous","Remote",600
+233146,2011,"First Nations people","Major Cities",368
+238576,2012,"First Nations people","Major Cities",429
+244198,2013,"First Nations people","Major Cities",446
+250022,2014,"First Nations people","Major Cities",486
+256056,2015,"First Nations people","Major Cities",508
+262297,2016,"First Nations people","Major Cities",551
+268745,2017,"First Nations people","Major Cities",617
+275391,2018,"First Nations people","Major Cities",642
+282229,2019,"First Nations people","Major Cities",708
+289254,2020,"First Nations people","Major Cities",810
+296462,2021,"First Nations people","Major Cities",795
+293812,2011,"First Nations people","Regional",455
+301250,2012,"First Nations people","Regional",545
+308903,2013,"First Nations people","Regional",540
+316777,2014,"First Nations people","Regional",565
+324886,2015,"First Nations people","Regional",613
+333238,2016,"First Nations people","Regional",648
+341827,2017,"First Nations people","Regional",704
+350644,2018,"First Nations people","Regional",797
+359680,2019,"First Nations people","Regional",669
+368925,2020,"First Nations people","Regional",946
+378382,2021,"First Nations people","Regional",885
+142923,2011,"First Nations people","Remote",330
+144191,2012,"First Nations people","Remote",426
+145482,2013,"First Nations people","Remote",420
+146790,2014,"First Nations people","Remote",392
+148106,2015,"First Nations people","Remote",461
+149421,2016,"First Nations people","Remote",454
+150728,2017,"First Nations people","Remote",393
+152029,2018,"First Nations people","Remote",466
+153312,2019,"First Nations people","Remote",447
+154578,2020,"First Nations people","Remote",504
+155824,2021,"First Nations people","Remote",503

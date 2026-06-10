@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name</title>
+  <title>Hospitalisations from Road Crashes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="https://d3js.org/d3.v7.min.js"></script>
-
 </head>
 <body>
 
@@ -17,24 +16,40 @@
     <div class="masthead__inner">
       <a href="/" class="masthead__logo">Hospitalisations from Road Crashes</a>
       <nav class="masthead__nav">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#line-section">Trends</a>
+        <a href="#bar-section">Rates</a>
       </nav>
     </div>
   </header>
 
   <main>
 
-    <div id="filters_remoteness"></div>
-    <div id="filters_status"></div>
-    <div class="responsive-svg-container"></div>
+    <!-- LINE CHART -->
+    <section id="line-section">
+      <div class="section-header">
+        <h2 class="section-header__title">Hospitalisation Trends Over Time</h2>
+        <span class="section-header__label">2011 – 2021</span>
+      </div>
+      <div id="filters_remoteness"></div>
+      <div id="filters_status"></div>
+      <div class="responsive-svg-container"></div>
+    </section>
 
-    <div id="year-filters"></div>   <!-- year buttons render here -->
-    <div id="donut-chart"></div>    <!-- SVG renders here -->
+    <div class="chart-divider"></div>
 
+    <!-- BAR CHART -->
+    <section id="bar-section">
+      <div class="section-header">
+        <h2 class="section-header__title">Rate per 100,000 Population</h2>
+        <span class="section-header__label">By year &amp; remoteness</span>
+      </div>
+      <div id="bar-filters-remoteness"></div>
+      <div id="bar-year-filters"></div>
+      <div id="bar-chart-container"></div>
+    </section>
 
   </main>
+
   <script src="assets/js/script.js"></script>
 </body>
 </html>
