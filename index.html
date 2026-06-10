@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,15 +16,23 @@
 
   <header class="masthead">
     <div class="masthead__inner">
-      <a href="/" class="masthead__logo">Hospitalisations from Road Crashes</a>
+      <a href="index.html" class="masthead__logo">Hospitalisations from Road Crashes</a>
       <nav class="masthead__nav">
         <a href="#line-section">Trends</a>
         <a href="#bar-section">Rates</a>
+        <a href="about-data.html">Data</a>
       </nav>
     </div>
   </header>
 
   <main>
+
+    <!-- PAGE INTRO -->
+    <div class="page-intro">
+      <p class="page-intro__eyebrow">Australia · 2011–2021</p>
+      <h1 class="page-intro__title">Road crash hospitalisations reveal a persistent and widening gap between First Nations and non-Indigenous Australians.</h1>
+      <p class="page-intro__body">Using hospitalisation records from BITRE and population estimates from the ABS, this dashboard tracks rates of road-related hospital admissions across remoteness areas over a decade. The further from a major city, the starker the disparity.</p>
+    </div>
 
     <!-- LINE CHART -->
     <section id="line-section">
@@ -30,9 +40,11 @@
         <h2 class="section-header__title">Hospitalisation Trends Over Time</h2>
         <span class="section-header__label">2011 – 2021</span>
       </div>
+      <p class="chart-narrative">Little summary here</p>
       <div id="filters_remoteness"></div>
       <div id="filters_status"></div>
       <div class="responsive-svg-container"></div>
+      <p class="chart-footnote">Source: BITRE Hospitalised Injuries 2011–2021; ABS Estimated Resident Population.</p>
     </section>
 
     <div class="chart-divider"></div>
@@ -43,9 +55,11 @@
         <h2 class="section-header__title">Rate per 100,000 Population</h2>
         <span class="section-header__label">By year &amp; remoteness</span>
       </div>
+      <p class="chart-narrative">Little summary here</p>
       <div id="bar-filters-remoteness"></div>
       <div id="bar-year-filters"></div>
       <div id="bar-chart-container"></div>
+      <p class="chart-footnote">Source: BITRE Hospitalised Injuries 2011–2021; ABS Estimated Resident Population.</p>
     </section>
 
   </main>

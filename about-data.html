@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Dictionary — Hospitalisations from Road Crashes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/dictionary.css">
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="masthead__inner">
+      <a href="index.html" class="masthead__logo">Hospitalisations from Road Crashes</a>
+      <nav class="masthead__nav">
+        <a href="index.html">Dashboard</a>
+        <a href="data-dictionary.html" class="active">Data</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dict-main">
+
+    <div class="dict-hero">
+      <p class="dict-hero__eyebrow">Reference</p>
+      <h1 class="dict-hero__title">Data Dictionary</h1>
+      <p class="dict-hero__sub">Sources, methodology, and variable definitions underpinning the dashboard.</p>
+    </div>
+
+    <div class="dict-grid">
+
+      <!-- SOURCES COLUMN -->
+      <aside class="dict-sources">
+        <h2 class="dict-aside-title">Sources</h2>
+
+        <div class="source-card">
+          <span class="source-card__tag">ABS</span>
+          <p class="source-card__title">Projected Population, Aboriginal and Torres Strait Islander Australians</p>
+          <p class="source-card__meta">Series B · Single year of age · Remoteness Areas · 2001–2026</p>
+          <a class="source-card__link" href="https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/3238.02001%20to%202026?OpenDocument" target="_blank">Catalogue 3238.0 ↗</a>
+        </div>
+
+        <div class="source-card">
+          <span class="source-card__tag">ABS</span>
+          <p class="source-card__title">Regional Population</p>
+          <p class="source-card__meta">Population estimates by LGA, Significant Urban Area, Remoteness Area and electoral division · 2001–2025</p>
+          <a class="source-card__link" href="https://www.abs.gov.au/statistics/people/population/regional-population/2024-25#data-downloads" target="_blank">View dataset ↗</a>
+        </div>
+
+        <div class="source-card">
+          <span class="source-card__tag">BITRE</span>
+          <p class="source-card__title">Hospitalised Injuries</p>
+          <p class="source-card__meta">Ongoing series · Updated to year ending 2021</p>
+          <ul class="source-card__releases">
+            <li>National · 2011–2021 <span>Sep 2023</span></li>
+            <li>State &amp; Territory · 2011–2021 <span>Nov 2023</span></li>
+            <li>First Nations Peoples · 2011–2021 <span>Oct 2023</span></li>
+          </ul>
+          <a class="source-card__link" href="https://www.bitre.gov.au/publications/ongoing/hospitalised-injury" target="_blank">View publication ↗</a>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="dict-content">
+
+        <section class="dict-section">
+          <h2 class="dict-section__title">Population Data</h2>
+          <p>Population figures are sourced from two ABS datasets. Projected Aboriginal and Torres Strait Islander population figures provide annual estimates by Indigenous status, remoteness area, age and sex. Total population estimates by remoteness area cover LGA, Significant Urban Area, and Remoteness Area breakdowns. Non-Indigenous population is derived by subtracting the First Nations estimate from the total for each remoteness area and year.</p>
+        </section>
+
+        <section class="dict-section">
+          <h2 class="dict-section__title">Hospitalisation Data</h2>
+          <p>Hospitalisation records come from the BITRE <em>Hospitalised Injuries</em> ongoing series. Three releases inform this dashboard, covering national figures, state and territory breakdowns, and a dedicated First Nations Peoples dataset — all extending to the year ending 2021. A <a href="https://www.bitre.gov.au/sites/default/files/documents/hospitalised-injury-data-dictionary-september-2023.pdf" target="_blank">data dictionary</a> accompanying the series provides variable definitions and coding conventions not communicated directly within the data files.</p>
+        </section>
+
+        <section class="dict-section">
+          <h2 class="dict-section__title">Rates &amp; Methodology</h2>
+          <p>Hospitalisation rates are expressed as cases per 100,000 population. Crude rates are calculated by dividing the sum of hospitalisations for a given group, year, and remoteness area by the corresponding population estimate, multiplied by 100,000.</p>
+          <div class="dict-formula">
+            <span>Rate</span>
+            <span class="dict-formula__eq">=</span>
+            <span class="dict-formula__frac">
+              <span class="dict-formula__num">Hospitalisations</span>
+              <span class="dict-formula__den">Population</span>
+            </span>
+            <span class="dict-formula__eq">×</span>
+            <span>100,000</span>
+          </div>
+          <p class="dict-note">These are crude rates and are not age-standardised. Comparisons across population groups should account for differences in age structure between First Nations and non-Indigenous populations.</p>
+        </section>
+
+        <section class="dict-section">
+          <h2 class="dict-section__title">Remoteness Areas</h2>
+          <p>Remoteness classifications follow the ABS Australian Statistical Geography Standard (ASGS). Two adjustments have been made for this dashboard:</p>
+          <table class="dict-table">
+            <thead>
+              <tr>
+                <th>Dashboard label</th>
+                <th>ASGS categories combined</th>
+                <th>Reason</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Regional</td>
+                <td>Inner Regional + Outer Regional</td>
+                <td>Aligns with First Nations population projection geography</td>
+              </tr>
+              <tr>
+                <td>Remote</td>
+                <td>Remote Australia + Very Remote Australia</td>
+                <td>Small population sizes; combined for statistical stability</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
+

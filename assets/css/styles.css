@@ -226,3 +226,553 @@ section {
   stroke: var(--color-border);
 }
    
+
+/* ─── Dictionary page layout ─────────────────────────────────────────── */
+
+.dict-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--gap);
+}
+
+/* ─── Hero ───────────────────────────────────────────────────────────── */
+.dict-hero {
+  padding: clamp(2rem, 5vw, 4rem) 0 clamp(1.5rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--color-rule);
+  margin-bottom: clamp(1.5rem, 4vw, 3rem);
+}
+
+.dict-hero__eyebrow {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-signal);
+  margin-bottom: 0.5rem;
+}
+
+.dict-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 300;
+  color: var(--color-ink);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.dict-hero__sub {
+  font-size: 1rem;
+  color: var(--color-muted);
+  max-width: 520px;
+  font-weight: 300;
+}
+
+/* ─── Two-column grid ────────────────────────────────────────────────── */
+.dict-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+@media (max-width: 720px) {
+  .dict-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Sources sidebar ────────────────────────────────────────────────── */
+.dict-aside-title {
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+.source-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-ink);
+  padding: 1rem 1rem 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.source-card__tag {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-bg);
+  background: var(--color-signal);
+  padding: 0.15rem 0.45rem;
+  margin-bottom: 0.6rem;
+}
+
+.source-card__title {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-ink);
+  line-height: 1.4;
+  margin-bottom: 0.35rem;
+}
+
+.source-card__meta {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+.source-card__releases {
+  list-style: none;
+  margin-bottom: 0.6rem;
+}
+
+.source-card__releases li {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+}
+
+.source-card__releases li:last-child { border-bottom: none; }
+
+.source-card__releases span {
+  color: var(--color-muted);
+  font-size: 0.7rem;
+}
+
+.source-card__link {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--color-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-accent);
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.source-card__link:hover {
+  color: var(--color-signal);
+  border-color: var(--color-signal);
+}
+
+/* ─── Content sections ───────────────────────────────────────────────── */
+.dict-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dict-section:last-child {
+  border-bottom: none;
+}
+
+.dict-section__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-ink);
+  margin-bottom: 0.85rem;
+}
+
+.dict-section p {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  margin-bottom: 0.85rem;
+}
+
+.dict-section p:last-child { margin-bottom: 0; }
+
+.dict-note {
+  font-size: 0.8rem !important;
+  color: var(--color-muted) !important;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-border);
+}
+
+/* ─── Formula ────────────────────────────────────────────────────────── */
+.dict-formula {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-ink);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  width: fit-content;
+}
+
+.dict-formula__eq {
+  color: var(--color-muted);
+}
+
+.dict-formula__frac {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.dict-formula__num {
+  border-bottom: 1px solid var(--color-ink);
+  padding-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.dict-formula__den {
+  font-size: 0.9rem;
+  padding-top: 0.2rem;
+}
+
+/* ─── Table ──────────────────────────────────────────────────────────── */
+.dict-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin: 1rem 0;
+}
+
+.dict-table th {
+  text-align: left;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  padding: 0.6rem 1rem 0.6rem 0;
+  border-bottom: 1px solid var(--color-ink);
+}
+
+.dict-table td {
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.dict-table td:first-child {
+  font-weight: 400;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.dict-table tr:last-child td { border-bottom: none; }
+
+/* ─── List ───────────────────────────────────────────────────────────── */
+.dict-list {
+  list-style: none;
+  padding: 0;
+}
+
+.dict-list li {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  padding: 0.65rem 0 0.65rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.dict-list li:last-child { border-bottom: none; }
+
+.dict-list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--color-signal);
+}
+
+/* ─── Active nav link ────────────────────────────────────────────────── */
+.masthead__nav a.active {
+  color: #f9f7f4;
+}
+
+
+/* ─── Variables ────────────────────────────────────────────────────── */
+:root {
+  --color-bg:          #f9f7f4;
+  --color-surface:     #ffffff;
+  --color-text:        #1a1a18;
+  --color-muted:       #888880;
+  --color-border:      #e2dfd9;
+  --color-accent:      #b5a48a;
+
+  /* Data colours */
+  --color-ink:         #1c2b3a;   /* dark navy — primary data / active state */
+  --color-signal:      #c95f2a;   /* red-orange — disparity / highlight */
+  --color-rule:        #d4c9b8;   /* hairline rule */
+
+  --font-display:      'Cormorant Garamond', Georgia, serif;
+  --font-body:         'DM Sans', sans-serif;
+
+  --masthead-height:   64px;
+  --max-width:         1200px;
+  --gap:               clamp(1rem, 4vw, 2.5rem);
+  --section-gap:       clamp(2.5rem, 6vw, 5rem);
+}
+
+/* ─── Reset ─────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Masthead ───────────────────────────────────────────────────────── */
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--masthead-height);
+  background-color: var(--color-ink);
+  border-bottom: none;
+}
+
+.masthead__inner {
+  max-width: var(--max-width);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 var(--gap);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.masthead__logo {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f9f7f4;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.masthead__logo:hover { color: var(--color-accent); }
+
+.masthead__nav { display: flex; gap: 2rem; }
+
+.masthead__nav a {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(249,247,244,0.5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.masthead__nav a:hover { color: #f9f7f4; }
+
+/* ─── Main layout ────────────────────────────────────────────────────── */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--gap);
+}
+
+/* ─── Chart sections ─────────────────────────────────────────────────── */
+section {
+  margin-bottom: var(--section-gap);
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.section-header__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 300;
+  color: var(--color-ink);
+  line-height: 1.2;
+}
+
+.section-header__label {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-signal);
+}
+
+/* ─── Filter rows ────────────────────────────────────────────────────── */
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.filter-row__label {
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-right: 0.25rem;
+  white-space: nowrap;
+}
+
+/* Shared filter button base — applies to all filter containers */
+#filters_remoteness,
+#filters_status,
+#bar-filters-remoteness,
+#bar-year-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+/* Universal filter button */
+#filters_remoteness .filter,
+#filters_status .filter,
+#bar-filters-remoteness .filter,
+#bar-year-filters .filter {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+
+#filters_remoteness .filter:hover,
+#filters_status .filter:hover,
+#bar-filters-remoteness .filter:hover,
+#bar-year-filters .filter:hover {
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+#filters_remoteness .filter.active,
+#filters_status .filter.active,
+#bar-filters-remoteness .filter.active,
+#bar-year-filters .filter.active {
+  color: var(--color-bg);
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+/* ─── Chart containers ───────────────────────────────────────────────── */
+.responsive-svg-container,
+#bar-chart-container {
+  width: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-ink);
+  padding: 1rem;
+}
+
+.responsive-svg-container svg,
+#bar-chart-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none !important;
+}
+
+/* ─── Divider between sections ───────────────────────────────────────── */
+.chart-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--color-rule);
+  margin: var(--section-gap) 0;
+}
+
+/* ─── Page intro ─────────────────────────────────────────────────────── */
+.page-intro {
+  padding: clamp(2rem, 5vw, 4rem) 0 clamp(1.5rem, 4vw, 3rem);
+}
+
+.page-intro__eyebrow {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-signal);
+  margin-bottom: 0.75rem;
+}
+
+.page-intro__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  font-weight: 300;
+  color: var(--color-ink);
+  line-height: 1.2;
+  max-width: 820px;
+  margin-bottom: 1rem;
+}
+
+.page-intro__body {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  max-width: 620px;
+  line-height: 1.75;
+}
+
+/* ─── Chart narrative ────────────────────────────────────────────────── */
+.chart-narrative {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--color-muted);
+  max-width: 680px;
+  margin-bottom: 1.25rem;
+  border-left: 2px solid var(--color-rule);
+  padding-left: 1rem;
+}
+
+/* ─── Chart footnote ─────────────────────────────────────────────────── */
+.chart-footnote {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin-top: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+/* ─── Axis & chart text (D3 inherits these via SVG) ──────────────────── */
+.axis text,
+.tick text {
+  font-family: var(--font-body);
+  font-size: 11px;
+  fill: var(--color-muted);
+}
+
+.axis path,
+.axis line,
+.tick line {
+  stroke: var(--color-border);
+}

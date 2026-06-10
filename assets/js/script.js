@@ -266,34 +266,34 @@ const colors = {
     const years       = [...new Set(data.map(d => d.year))].sort();
     const remotenesses = [...new Set(data.map(d => d.remoteness))];
   
-    let selectedYear       = 2021;
-    let selectedRemoteness = remotenesses[0];
+    let selectedYear       = "All";
+    let selectedRemoteness = "All";
   
-    // Year buttons
-    d3.select("#bar-year-filters")
-      .selectAll("button")
-      .data(years)
-      .join("button")
-        .attr("class", d => `filter ${d === selectedYear ? "active" : ""}`)
-        .text(d => d)
-        .on("click", function(event, d) {
-          selectedYear = d;
-          d3.select("#bar-year-filters").selectAll("button").classed("active", y => y === selectedYear);
-          renderBarChart();
-        });
-  
-    // Remoteness buttons
-    d3.select("#bar-filters-remoteness")
-      .selectAll("button")
-      .data(remotenesses)
-      .join("button")
-        .attr("class", d => `filter ${d === selectedRemoteness ? "active" : ""}`)
-        .text(d => d)
-        .on("click", function(event, d) {
-          selectedRemoteness = d;
-          d3.select("#bar-filters-remoteness").selectAll("button").classed("active", r => r === selectedRemoteness);
-          renderBarChart();
-        });
+   // Year buttons
+d3.select("#bar-year-filters")
+.selectAll("button")
+.data(["All", ...years])
+.join("button")
+  .attr("class", d => `filter ${d === selectedYear ? "active" : ""}`)
+  .text(d => d)
+  .on("click", function(event, d) {
+    selectedYear = d;
+    d3.select("#bar-year-filters").selectAll("button").classed("active", y => y === selectedYear);
+    renderBarChart();
+  });
+
+// Remoteness buttons
+d3.select("#bar-filters-remoteness")
+.selectAll("button")
+.data(["All", ...remotenesses])
+.join("button")
+  .attr("class", d => `filter ${d === selectedRemoteness ? "active" : ""}`)
+  .text(d => d)
+  .on("click", function(event, d) {
+    selectedRemoteness = d;
+    d3.select("#bar-filters-remoteness").selectAll("button").classed("active", r => r === selectedRemoteness);
+    renderBarChart();
+  });
   
     const bMargin = { top: 40, right: 30, bottom: 50, left: 70 };
     const bWidth  = 600;
@@ -328,10 +328,21 @@ const colors = {
       .style("font-size", "13px").style("font-weight", "bold");
   
     function renderBarChart() {
-      const filtered = data.filter(d => d.year === selectedYear && d.remoteness === selectedRemoteness);
-      const fnRow = filtered.find(d => d.status === "First Nations people");
-      const niRow = filtered.find(d => d.status === "Non-Indigenous");
-      if (!fnRow || !niRow) return;
+      const filtered = data.filter(d =>
+        (selectedYear === "All" || d.year === selectedYear) &&
+        (selectedRemoteness === "All" || d.remoteness === selectedRemoteness)
+      );
+      
+      const fnRow = {
+        rate: (d3.sum(filtered.filter(d => d.status === "First Nations people"), d => d.hospitalisations) /
+               d3.sum(filtered.filter(d => d.status === "First Nations people"), d => d.population)) * 100000
+      };
+      
+      const niRow = {
+        rate: (d3.sum(filtered.filter(d => d.status === "Non-Indigenous"), d => d.hospitalisations) /
+               d3.sum(filtered.filter(d => d.status === "Non-Indigenous"), d => d.population)) * 100000
+      };
+  
   
       const chartData = [
         { group: "First Nations",  rate: Math.round(fnRow.rate) },
