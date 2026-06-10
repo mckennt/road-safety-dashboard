@@ -21,6 +21,8 @@
   --section-gap:       clamp(2.5rem, 6vw, 5rem);
 }
 
+
+
 /* ─── Reset ─────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -775,4 +777,40 @@ section {
 .axis line,
 .tick line {
   stroke: var(--color-border);
+}
+
+.chart-tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: var(--color-ink);
+  color: #f9f7f4;
+  padding: 0.6rem 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  z-index: 200;
+  max-width: 200px;
+}
+
+.chart-tooltip.visible { opacity: 1; }
+
+.chart-tooltip__title {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.25rem;
+}
+
+.chart-tooltip__value {
+  font-size: 1rem;
+  font-family: var(--font-display);
+  color: #ffffff;
+}
+
+.chart-tooltip__sub {
+  color: rgba(249,247,244,0.6);
+  font-size: 0.7rem;
 }
