@@ -481,3 +481,6 @@ d3.csv("assets/data/populations_final.csv", d => ({
 
   renderBarChart();
 });
+
+// AI DECLARATION
+// Most code was altered based on earlier weeks works - primarily week 5 and 6, which was then  initially iterated through manually to add further functionality - before troubleshooting and refining touches utilising AI

@@ -500,6 +500,10 @@ section {
   color: #f9f7f4;
 }
 
+#line-section,
+#bar-section {
+  scroll-margin-top: 80px;
+}
 
 /* ─── Variables ────────────────────────────────────────────────────── */
 :root {
@@ -814,3 +818,6 @@ section {
   color: rgba(249,247,244,0.6);
   font-size: 0.7rem;
 }
+
+/* AI DECLARATION
+/* Significant AI was utilised in the CSS development - out of convenience more than anything as we felt it was out of the scope of the unit
