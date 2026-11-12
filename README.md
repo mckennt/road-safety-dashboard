@@ -16,7 +16,7 @@ First Nations hospitalised injuries by remoteness area.
 
 ## Design Process
 
-Explored in KNIME before building in D3 — see `knime/road-safety-exploration.knwf`. 
+Explored in KNIME before building in D3 — see /KNIME. 
 An early pie chart was dropped after usability testing in favour of the bar chart.
 
 ## Built With
